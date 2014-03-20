@@ -1,0 +1,432 @@
+<Alloy>
+	<Window class="container" navBarHidden="true" fullscreen="true" onClick="hide">
+		<!--
+		this screen(id=LoginView) will display the login page this events
+		-->
+		<View class="innerview" id="LoginView">
+			<TableView class="separate" scrollable="false">
+				<TableViewRow class="headbg"/>
+				<TableViewRow>
+					<Label class="topbg">Login</Label>
+				</TableViewRow>
+				<TableViewRow>
+					<ImageView id="imageView"/>
+				</TableViewRow>
+				<!--
+				In this TableViewRow (id=tableRowParent) create the login box for textfields or buttons
+				-->
+				<TableViewRow id="tableRowParent">
+					<TableView id="tableViewLogin" scrollable="false">
+						<!--
+						In this TableViewRow (id=tableRowUid) create the username textfields
+						-->
+						<TableViewRow id="tableRowUid">
+							<View id="txtuid">
+								<TextField id="textFieldUsername" hintText="Email" class="username"/>
+								<ImageView class="usericon"/>
+							</View>
+						</TableViewRow>
+						<!--
+						In this TableViewRow (id=tableRowPid) create the password textfields
+						-->
+						<TableViewRow id="tableRowPid">
+							<View id="txtpid">
+								<TextField id="textFieldPassword" hintText="Password" passwordMask="True" class="pswd"/>
+								<ImageView class="pswdicon"/>
+							</View>
+						</TableViewRow>
+						<!--
+						In this TableViewRow (id=tableRowLogin) create the login button
+						-->
+						<TableViewRow id="tableRowLogin">
+							<Button id="login" onClick="funcOnClickLoginUser">Login</Button>
+						</TableViewRow>
+						<TableViewRow>
+							<View class="hrLine"/>
+						</TableViewRow>
+						<TableViewRow>
+							<View class="reset">
+								<!--
+								In this TableViewRow (class=reset) create the reset button
+								-->
+								<View class="resetbtn">
+									<ImageView class="resetImage" onClick="funcResetPwd"/>
+									<Label class="resetText" onClick="funcResetPwd">Reset Password</Label>
+								</View>
+								<Label class="vrLine"/>
+								<!--
+								In this TableViewRow (class=newbtn) create the new account button
+								-->
+								<View class="newbtn">
+									<ImageView class="newImage" onClick="funcRegister"/>
+									<Label class="newText" onClick="funcRegister">New Account</Label>
+								</View>
+							</View>
+						</TableViewRow>
+					</TableView>
+				</TableViewRow>
+			</TableView>
+		</View>
+		<View id="Error" visible="false">
+			<TableView class="loginarea1">
+				<TableViewRow>
+					<View>
+						<Label id="errorTitleLabel" class="username1"/>
+					</View>
+				</TableViewRow>
+				<TableViewRow>
+					<View>
+						<Label id="errorMsgLabel" class="pswd1"/>
+					</View>
+				</TableViewRow>
+				<TableViewRow>
+					<Button id="okButton">OK</Button>
+				</TableViewRow>
+			</TableView>
+		</View>
+		<!--
+		this screen(id=page2) will display the blank page of events
+		-->
+		<View class="innerview" id="Page2" visible="false">
+			<TableView class="separate" scrollable="false">
+				<TableViewRow class="headbg"/>
+				<TableViewRow>
+					<View class="topbg">
+						<Button id="backBtn" visible="false">Back</Button>
+						<Label class="topbg">Events</Label>
+						<View>
+							<Button id="bar" onClick="toggle"/>
+							<Button class="bar" onClick="toggle"/>
+						</View>
+					</View>
+				</TableViewRow>
+				<TableViewRow>
+					<!--
+					In this TableView (id=tableNoEventmain) create the message box for no events
+					-->
+					<TableView id="tableNoEventmain" backgroundcolor="transparent" class="noEvent" scrollable="false">
+						<!--
+						In this TableViewRow (id=tableRowNoEventTitle) display the heading of message for no events
+						-->
+						<TableViewRow opacity="0" id="tableRowNoEventTitle">
+							<Label id="lableNoEventTitle" class="head"/>
+						</TableViewRow>
+						<TableViewRow opacity="0">
+							<View class="hrLine"/>
+						</TableViewRow>
+						<!--
+						In this TableViewRow (id=tableRowEventBody) display the message for no events
+						-->
+						<TableViewRow opacity="0" id="tableRowEventBody">
+							<Label id="lableNoEventBody" class="signupMsg"/>
+						</TableViewRow>
+						<!--
+						In this TableViewRow (id=findEvents) display the button for find events
+						-->
+						<TableViewRow opacity="0">
+							<Button id="findEvents" onClick="findeven">FIND EVENTS</Button>
+						</TableViewRow>
+					</TableView>
+				</TableViewRow>
+				<TableViewRow opacity="0" id="noeventArrowId">
+					<ImageView id="noeventArrow"/>
+				</TableViewRow>
+				<TableViewRow opacity="0">
+					<ImageView id="frogView"/>
+				</TableViewRow>
+			</TableView>
+		</View>
+		<!--
+		this screen(id=page3) will display the list of events
+		-->
+		<View class="innerview" id="Page3" visible="false">
+			<TableView class="separate" scrollable="false">
+				<TableViewRow class="headbg"/>
+				<TableViewRow scrollable="false">
+					<View class="topbg">
+						<Button id="backBtn" visible="false">Back</Button>
+						<Label class="topbg">Frog Quest Events</Label>
+						<View>
+							<Button id="bar" onClick="toggle"/>
+							<Button class="bar" onClick="toggle"/>
+						</View>
+					</View>
+				</TableViewRow>
+				<!--
+				In this TableViewRow (id=tableViewPage) display the button for find more events
+				-->
+				<TableViewRow id="tableViewPage">
+					<View id="eventlistpageId" class="eventlistpage">
+						<Button id="listofEvents" onClick="findeven">FIND MORE EVENTS</Button>
+						<ImageView id="eventList"/>
+					</View>
+				</TableViewRow>
+				<!--
+				In this TableViewRow (id=tableViewTable) display the list of events
+				-->
+				<TableViewRow id="tableViewTable" opacity="0">
+					<TableView id="eventListTable" separatorColor= "transparent"></TableView>
+				</TableViewRow>
+			</TableView>
+		</View>
+		<!--
+		in this app when the quest list is generated then this screen(id=page4) will display
+		-->
+		<View class="innerview" id="Page4" visible="false">
+			<TableView class="separate" scrollable="false">
+				<TableViewRow class="headbg"/>
+				<TableViewRow scrollable="false">
+					<View class="topbg">
+						<Button id="backBtn" visible="true">Back</Button>
+						<TableView class="separate">
+							<!--
+							In this TableViewRow (class=questName) display the name of quest on the topbar of application
+							-->
+							<TableViewRow>
+								<Label class="questName">The Frog Whisperers</Label>
+							</TableViewRow>
+							<TableViewRow>
+								<Label class="questArea">Lorem ipsum Frog Quest</Label>
+							</TableViewRow>
+						</TableView>
+						<View>
+							<Button id="bar" onClick="toggle"/>
+							<Button class="bar" onClick="toggle"/>
+						</View>
+					</View>
+				</TableViewRow>
+				<TableViewRow>
+					<View class="fourBox">
+						<View class="pendBoxBg">
+							<!--
+							In this Label (class=pending) display the counts of pending
+							-->
+							<Label class="pending">Pending</Label>
+							<Label class="countNo">1</Label>
+						</View>
+						<View class="invalidBoxBg">
+							<!--
+							In this Label (class=invalid) display the counts of invalid
+							-->
+							<Label class="invalid">Invalid</Label>
+							<Label class="countNo">1</Label>
+						</View>
+						<View class="validBoxBg">
+							<!--
+							In this Label (class=valid) display the counts of valid
+							-->
+							<Label class="valid">Valid</Label>
+							<Label class="countNo">1</Label>
+						</View>
+						<View class="remainBoxBg">
+							<!--
+							In this Label (class=remain) display the counts of Remaining
+							-->
+							<Label class="remain">Remaining</Label>
+							<Label class="countNo">1</Label>
+						</View>
+					</View>
+				</TableViewRow>
+				<TableViewRow>
+					<!--
+					In this View (class=questListBg) display the list of quest participators
+					-->
+					<View class="questListBg">
+						<View class="questPicBg">
+							<ImageView id="uploadPic"/>
+						</View>
+						<View class="questTextBg">
+							<Label class="questTxtHeadBg">Hello</Label>
+							<Label class="questTxtLineBg">Suspendisse potenti. Quisque et lorem porttitor, rhoncus mauris non, eleifend arcu</Label>
+						</View>
+						<View class="questSelectBg">
+							<View>
+								<ImageView id="questSelectArrow"/>
+							</View>
+							<View id="smallCupBg">
+								<ImageView id="questSmallCup"/>
+								<Label class="smallCupTxt">5</Label>
+							</View>
+						</View>
+					</View>
+				</TableViewRow>
+				<TableViewRow>
+					<View class="questListBg">
+						<View class="questPicBgGreen">
+							<ImageView id="uploadPic"/>
+						</View>
+						<View class="questTextBg">
+							<Label class="questTxtHeadBg">Hello</Label>
+							<Label class="questTxtLineBg">Suspendisse potenti. Quisque et lorem porttitor, rhoncus mauris non, eleifend arcu</Label>
+						</View>
+						<View class="questSelectBg">
+							<View>
+								<ImageView id="questSelectArrow"/>
+							</View>
+							<View id="smallCupBg">
+								<ImageView id="questSmallCup"/>
+								<Label class="smallCupTxt">5</Label>
+							</View>
+						</View>
+					</View>
+				</TableViewRow>
+				<TableViewRow>
+					<View class="questListBg">
+						<View class="questPicBgRed">
+							<ImageView id="uploadPic"/>
+						</View>
+						<View class="questTextBg">
+							<Label class="questTxtHeadBg">Hello</Label>
+							<Label class="questTxtLineBg">Suspendisse potenti. Quisque et lorem porttitor, rhoncus mauris non, eleifend arcu</Label>
+						</View>
+						<View class="questSelectBg">
+							<View>
+								<ImageView id="questSelectArrow"/>
+							</View>
+							<View id="smallCupBg">
+								<ImageView id="questSmallCup"/>
+								<Label class="smallCupTxt">5</Label>
+							</View>
+						</View>
+					</View>
+				</TableViewRow>
+				<TableViewRow>
+					<View class="questListBg">
+						<View class="questPicBgBlue">
+							<ImageView id="uploadPic"/>
+						</View>
+						<View class="questTextBg">
+							<Label class="questTxtHeadBg">Hello</Label>
+							<Label class="questTxtLineBg">Suspendisse potenti. Quisque et lorem porttitor, rhoncus mauris non, eleifend arcu</Label>
+						</View>
+						<View class="questSelectBg">
+							<View>
+								<ImageView id="questSelectArrow"/>
+							</View>
+							<View id="smallCupBg">
+								<ImageView id="questSmallCup"/>
+								<Label class="smallCupTxt">5</Label>
+							</View>
+						</View>
+					</View>
+				</TableViewRow>
+			</TableView>
+			<TableView class="bottomNav" separatorColor="transparent">
+				<TableViewRow>
+					<View>
+						<!--
+						In this View (class=questListBg) display the button of quest in bottom
+						-->
+						<View class="questNavSelect">
+							<ImageView id="questIcon"/>
+							<Label class="questIconTxt">Quest</Label>
+						</View>
+						<!--
+						In this View (class=rankingIconBg) display the button of Ranking in bottom
+						-->
+						<View class="rankingIconBg">
+							<ImageView id="rankingIcon"/>
+							<Label class="rankingIconTxt">Ranking</Label>
+						</View>
+						<!--
+						In this View (class=galleryIconBg) display the button of Gallery in bottom
+						-->
+						<View class="galleryIconBg">
+							<ImageView id="galleryIcon"/>
+							<Label class="galleryIconTxt">Gallery</Label>
+						</View>
+					</View>
+				</TableViewRow>
+			</TableView>
+		</View>
+		<!--
+		in this app when the quest list is blank then this screen(id=page5) will display
+		-->
+		<View class="innerview" id="Page5" visible="false">
+			<TableView class="separate">
+				<TableViewRow class="headbg"/>
+				<TableViewRow>
+					<View class="topbg">
+						<Button id="backBtn" visible="true">Back</Button>
+						<TableView class="separate">
+							<TableViewRow>
+								<Label class="questName">The Frog Whisperers</Label>
+							</TableViewRow>
+							<TableViewRow>
+								<Label class="questArea">Lorem ipsum Frog Quest</Label>
+							</TableViewRow>
+						</TableView>
+						<View>
+							<Button id="bar" onClick="toggle"/>
+							<Button class="bar" onClick="toggle"/>
+						</View>
+					</View>
+				</TableViewRow>
+				<TableViewRow>
+					<!--
+					In this TableView (class=noQuest) display that here is no any quest participators
+					-->
+					<TableView class="noQuest">
+						<!--
+						In this TableViewRow (class=headTwo) display the heading
+						-->
+						<TableViewRow>
+							<Label class="headTwo">SLOW YOUR ROLL!</Label>
+						</TableViewRow>
+						<TableViewRow>
+							<View class="hrLine"/>
+						</TableViewRow>
+						<!--
+						In this TableViewRow (class=noQuestMsg) display the message
+						-->
+						<TableViewRow>
+							<Label class="noQuestMsg">You're being a bit over zealous aren't you? This event hasn't yet begun. Why don't you chill for a while and come back when it gets closer to the actual start time?</Label>
+						</TableViewRow>
+					</TableView>
+				</TableViewRow>
+				<TableViewRow>
+					<ImageView id="noeventArrow"/>
+				</TableViewRow>
+				<TableViewRow>
+					<ImageView id="questView"/>
+				</TableViewRow>
+			</TableView>
+			<TableView class="bottomNav" separatorColor="transparent">
+				<TableViewRow>
+					<View>
+						<View class="questNavSelect">
+							<ImageView id="questIcon"/>
+							<Label class="questIconTxt">Quest</Label>
+						</View>
+						<View class="rankingIconBg">
+							<ImageView id="rankingIcon"/>
+							<Label class="rankingIconTxt">Ranking</Label>
+						</View>
+						<View class="galleryIconBg">
+							<ImageView id="galleryIcon"/>
+							<Label class="galleryIconTxt">Gallery</Label>
+						</View>
+					</View>
+				</TableViewRow>
+			</TableView>
+		</View>
+		<View id="container" onClick="hide" visible="false">
+			<View id="options" onSwipe="mayHide" class="topbg">
+				<View class="option">
+					<Label color="#ffffff" onClick="Home">Home</Label>
+				</View>
+				<ImageView height="1dp" width="100%" backgroundColor="#ffffff"/>
+				<View class="option">
+					<Label color="#ffffff" onClick="preference">Preference</Label>
+				</View>
+				<ImageView height="1dp" width="100%" backgroundColor="#ffffff"/>
+				<View class="option">
+					<Label color="#ffffff" onClick="logOut">LogOut</Label>
+				</View>
+			</View>
+		</View>
+		<View id="blurout" visible="false">
+			<ActivityIndicator id="activityIndicator"/>
+		</View>
+	</Window>
+</Alloy>

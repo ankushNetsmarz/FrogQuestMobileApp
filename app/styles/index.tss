@@ -1,0 +1,752 @@
+".container": {
+	backgroundImage:"/images/bg.png",
+	//backgroundColor:"#000000"
+},
+".innerview": {
+	backgroundImage:"/images/logoshadow.png"
+},
+".separate": {
+	separatorColor: "transparent",
+	backgroundColor:"transparent"
+},
+".headbg": {
+	height:"9dp",
+	backgroundImage:"/images/top_bg.png",
+    width:"100%"
+},
+".topbg": {
+	color:"#fff",
+	height:"50dp",
+	textAlign:"center",
+    width: Ti.UI.FILL,
+	backgroundGradient: {
+         type: "linear",
+         startPoint: { x: "0%", y:"0%"},
+         endPoint: { x: "0%", y:"100%"},
+         colors: [
+                { color: "#667733", offset: 0.0 },
+                { color: "#505e26", offset: 1.0 }
+         ]
+   },
+   font:{
+	   fontSize:"18",
+	   fontFamily:"Roboto-Bold"
+	}
+},
+".questName":{
+	font:{
+	   fontSize:"17",
+	   fontFamily:"Roboto-Bold"
+	},
+color:"#fff"
+},
+".questArea":{
+	font:{
+	   fontSize:"14",
+	   fontFamily:"RobotoCondensed-Regular"
+	},
+color:"#fff",
+top:"0dp"
+},
+"TableViewRow":{
+	border:"none"
+},
+".loginarea":{
+	width:"80%",
+	height:"300dp",
+	backgroundColor:"#B3ffffff",
+	//backgroundColor:"transparent",
+	borderRadius:"30",
+	separatorColor: "transparent",
+	bottom:"30dp"
+	
+},
+".username1":
+{
+	color: '#900',
+  font: { fontSize:20 },
+  shadowColor: '#aaa',
+  shadowOffset: {x:5, y:5},
+  shadowRadius: 3,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  top: 10
+},
+".pswd1":
+{
+	 color: '#000',
+  font: { fontSize:16 },
+  shadowColor: '#aaa',
+  shadowOffset: {x:5, y:5},
+  shadowRadius: 3,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  left: 10
+},
+".loginarea1":{
+	width:"60%",
+	height: Ti.UI.SIZE,
+	backgroundColor:"#dbdbdb",
+	borderRadius:"30",
+	separatorColor: "transparent",
+	bottom:"50%"
+},
+"#imageView":{
+	image:"/images/fqlogo.png",
+	top:"20dp",
+	bottom:"20dp",
+	height:"90dp"
+},
+"#txtuid":{
+	borderRadius:"30",
+  color: '#000',
+  backgroundColor:"#fff",
+  height:"50dp",
+  width:"80%",
+  top:"30dp"
+},
+".username":{
+	width:"80%",
+	left:"0dp",
+	backgroundColor:"#B3ffffff",
+	color:"#000000",
+	height:"40dp",
+	font:{
+		
+	   fontSize:"15",
+	   fontFamily:"RobotoCondensed-Regular"
+	},
+	
+},
+".usericon":{
+	image:"/images/email_man_icon.png",
+	right:"10dp",
+	height:"27dp"
+},
+"#txtpid":{
+	borderRadius:"30",
+  color: '#000',
+  backgroundColor:"#fff",
+  height:"50dp",
+  width:"80%",
+  top:"10dp"
+},
+".pswd":{
+	width:"80%",
+	left:"0dp",
+	backgroundColor:"none",
+	color:"#000000",
+	height:"40dp",
+	font:{
+	   fontSize:"15",
+	   fontFamily:"RobotoCondensed-Regular"
+	}
+},
+".pswdicon":{
+	image:"/images/lock_icon.png",
+	right:"10dp",
+	height:"27dp"
+},
+"#login":{
+	width:"80%",
+	height:"50dp",
+	color:"#fff",
+	borderRadius:"30",
+	top:"20dp",
+	bottom:"20dp",
+	backgroundColor:"#dd5522",
+	font:{
+	   fontSize:"18",
+	   fontFamily:"RobotoCondensed-Bold"
+	}
+},
+"#okButton":{
+	width:"50%",
+	height:"43dp",
+	color:"#fff",
+	borderRadius:"33",
+	top:"20dp",
+	bottom:"20dp",
+	backgroundColor:"#dd5522",
+	font:{
+	   fontSize:"18",
+	   fontFamily:"RobotoCondensed-Bold"
+	}
+},
+".hrLine":{
+	backgroundColor:"#4d778833",
+	width:"80%",
+	height:"1dp"
+},
+".vrLine":{
+	backgroundColor:"#4d778833",
+	width:"1dp",
+	height:"40dp",
+	textAlign:"center"
+},
+".vrLine1":{
+	backgroundColor:"#dbdbdb",
+	width:"1dp",
+	height:"40dp",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT	
+},
+".reset":{
+	width:"100%",
+	height:"55dp",
+	top:"10dp",
+	textAlign:"center"
+},
+".resetImage":{
+	image:"/images/reset.png",
+	textAlign:"center",
+	width:"40dp",
+	top:"0dp"
+},
+".resetText":{
+	width:"100%",
+	textAlign:"center",
+	bottom:"0dp",
+	left:5,
+	color:"#61615d",
+	font:{
+	   fontSize:"13",	  
+	}
+},
+".newImage":{
+	image:"/images/new-ac.png",
+	textAlign:"center",
+	width:"40dp",
+	top:"0dp"
+},
+".newText":{
+	width:"100%",
+	textAlign:"center",
+	bottom:"0dp",
+	color:"#778833",
+	font:{
+	   fontSize:"13",	  
+	}
+},
+".noEvent":{
+	width:"80%",
+	backgroundColor:"#99ffffff",
+	borderRadius:"30",
+	separatorColor: "transparent",
+	top:"30dp"
+},
+".noQuest":{
+	width:"80%",
+	backgroundColor:"#99ffffff",
+	borderRadius:"30",
+	separatorColor: "transparent",
+	top:"30dp",
+	height:"180dp"
+},
+"#backBtn":{
+	left:"15dp",
+	backgroundImage:"/images/back_space_bg.png",
+	backgroundColor:"none",
+	color:"#444411",
+	font:{
+	   fontSize:"14",
+	   fontFamily:"RobotoCondensed-Bold"
+	},
+	textAlign:"center",
+	height:"25dp",
+	width:"60dp"
+},
+
+"#findEvents":{
+	width:"60%",
+	height:"50dp",
+	color:"#fff",
+	borderRadius:"30",
+	top:"20dp",
+	bottom:"20dp",
+	backgroundColor:"#dd5522",
+	font:{
+	   fontSize:"18",
+	   fontFamily:"RobotoCondensed-Bold"
+	}
+},
+
+"#listofEvents":{
+	width:"71%",
+	height:"50dp",
+	color:"#fff",
+	borderRadius:"30",
+	left:"0dp",
+	backgroundColor:"#dd5522",
+	font:{
+	   fontSize:"18",
+	   fontFamily:"RobotoCondensed-Bold"
+	}
+},
+".headTwo":{
+	font:{
+	   fontSize:"24",
+	   fontFamily:"RobotoCondensed-Bold"
+	},
+	color:"#444411",
+	textAlign:"center",
+	top:"25dp",
+	bottom:"15dp"
+},
+".head":{
+	font:{
+	   fontSize:"24",
+	   fontFamily:"RobotoCondensed-Bold"
+	},
+	color:"#444411",
+	textAlign:"center",
+	top:"35dp",
+	bottom:"50dp"
+},
+".signupMsg":{
+	font:{
+	   fontSize:"18",
+	   fontFamily:"RobotoCondensed-Regular"
+	},
+	color:"#444411",
+	textAlign:"center",
+	top:"15dp",
+	bottom:"20dp",
+	width:"80%"
+},
+".noQuestMsg":{
+	font:{
+	   fontSize:"13",
+	   fontFamily:"RobotoCondensed-Regular"
+	},
+	color:"#444411",
+	textAlign:"center",
+	top:"15dp",
+	bottom:"20dp",
+	width:"80%"
+},
+"#noeventArrow":{
+	image:"/images/noevent-arrow.png",
+	top:"-1dp",
+	bottom:"0dp",
+	height:"30dp"
+},
+"#noeventArrowId":
+{     top:"0dp",
+	separatorColor: "transparent"
+},
+"#frogView":{
+	image:"/images/frog_icon_1.png",
+	top:"0dp",
+	bottom:"20dp",
+	height:"90dp"
+},
+"#eventList":{
+	image:"/images/frog_icon.png",
+	top:"0dp",
+	bottom:"0dp",
+	height:"120dp",
+	right:"0dp"
+},
+".eventlistpage":{
+	width:"85%"
+	
+	
+},
+"#container": {
+	 right: 1, left: "70%",
+	height: Ti.UI.SIZE
+	
+},
+ 
+"#bar": {
+	right:"0dp",
+	backgroundColor:"none",
+	height:"30dp",
+	width:"30dp",
+	bubbleParent: false, // Stop taps from bubbling to container, causing hide
+			
+},
+ 
+ ".bar": {
+ 	right:"10dp",
+	backgroundImage:"/images/right_side_dot.png",
+	backgroundColor:"none",
+	height:"30dp",
+	width:"9dp",
+	bubbleParent: false, // Stop taps from bubbling to container, causing hide
+			
+},
+"#options": {
+	top: 0, right: 0, left: 0,
+	height: Ti.UI.SIZE,
+	layout: 'vertical',
+	
+	bubbleParent: false, // Stop taps from bubbling to container, causing hide
+	
+	backgroundColor: '#5f00'
+},
+ 
+".option": {
+	top: 0, right: 0, left: 0,
+	height: 44,	
+	backgroundColor: '#667733'
+	
+},
+".vrLine2":{
+	backgroundColor:"#4d778833",
+	width:"2dp",
+	height:"40dp",
+	textAlign:"center"
+},
+".yearBg":{
+	color:"#ffffff",
+	backgroundColor:"#444411",
+	font:{
+	   fontSize:"15",
+	   fontFamily:"RobotoCondensed-Bold"
+	},
+	height:"30dp",
+	left:"0dp",
+	width:"20%",
+	textAlign:"center"
+},
+".listBg":{
+	backgroundColor:"#b3ffffff",
+	width:"100%",
+	height:"70dp",
+	left:"0dp"
+},
+".dateBg":{
+		backgroundColor:"#ffffff",
+	width:"12%",
+	height:"50dp",
+	left:"10dp",
+	borderRadius:"10"
+},
+".textBg":{
+	width:"70%",
+	height:"60dp"
+},
+".selectBg":{
+	backgroundColor:"#b3ffffff",
+	width:"15%",
+	height:"60dp",
+	right:"0dp",
+	textAlign:"center"
+},
+"#selectArrow":{
+	image:"/images/org_arrow_icon.png",
+	height:"34dp",
+	right:"20dp",
+	textAlign:"center"
+},
+"#activityIndicator":{
+	
+	color:"orange",
+ font:{
+	   fontSize:"26",
+	   fontFamily:"Roboto-Bold"
+	},
+  height:Ti.UI.SIZE,
+  width:Ti.UI.SIZE,
+  zindex:100
+  	
+},
+"#blurout":{
+	backgroundImage:"/img/transparent.png",
+	backgroundColor:"B3000000",
+	color:"B3000000",
+	 height:Ti.UI.FILL,
+  width:Ti.UI.FILL	
+},
+".resetbtn":{
+	width:"49%",
+	left:"0dp",
+	color:"#61615d"
+},
+".newbtn":{
+	width:"49%",
+	right:"0dp",
+	color:"#61615d"
+},
+".fourBox":{
+	width:"100%",
+	height:"70dp",
+	left:"10dp",
+	top:"15dp",
+	bottom:"15dp",
+	right:"10dp"
+},
+".pendBoxBg":{
+		backgroundColor:"#ffffff",
+	width:"22%",
+	height:"70dp",
+	left:"5dp",
+	borderRadius:"10"
+},
+".pending":{
+	backgroundColor:"#2077a2",
+	width:"100%",
+	height:"30dp",
+	top:"0dp",
+	textAlign:"center",
+	color:"#ffffff",
+	font:{
+	   fontSize:"14",
+	   fontFamily:"Roboto-Bold"
+	}
+},
+".countNo":{
+	color:"#444444",
+	top:"33dp",
+	textAlign:"center",
+	font:{
+	   fontSize:"20",
+	   fontFamily:"Roboto-Bold"
+	}
+},
+".invalidBoxBg":{
+		backgroundColor:"#ffffff",
+	width:"22%",
+	height:"70dp",
+	left:"25%",
+	borderRadius:"10"
+},
+".invalid":{
+	backgroundColor:"#b03230",
+	width:"100%",
+	height:"30dp",
+	top:"0dp",
+	textAlign:"center",
+	color:"#ffffff",
+	font:{
+	   fontSize:"14",
+	   fontFamily:"Roboto-Bold"
+	}
+},
+".validBoxBg":{
+		backgroundColor:"#ffffff",
+	width:"22%",
+	height:"70dp",
+	left:"49%",
+	borderRadius:"10"
+},
+".valid":{
+	backgroundColor:"#2d782e",
+	width:"100%",
+	height:"30dp",
+	top:"0dp",
+	textAlign:"center",
+	color:"#ffffff",
+	font:{
+	   fontSize:"14",
+	   fontFamily:"Roboto-Bold"
+	}
+},
+".remainBoxBg":{
+		backgroundColor:"#ffffff",
+	width:"22%",
+	height:"70dp",
+	left:"73%",
+	borderRadius:"10"
+},
+".remain":{
+	backgroundColor:"#8b8b3e",
+	width:"100%",
+	height:"30dp",
+	top:"0dp",
+	textAlign:"center",
+	color:"#ffffff",
+	font:{
+	   fontSize:"14",
+	   fontFamily:"Roboto-Bold"
+	}
+},
+".questListBg":{
+	backgroundColor:"#b3ffffff",
+	width:"100%",
+	height:"80dp",
+	left:"0dp"
+},
+".questPicBg":{
+    backgroundColor:"#8b8b3e",
+	width:"16%",
+	height:"80dp",
+	left:"0dp"
+},
+".questTextBg":{
+	width:"68%",
+	height:"80dp"
+},
+".questSelectBg":{
+	backgroundColor:"#b3ffffff",
+	width:"15%",
+	height:"80dp",
+	right:"0dp",
+	textAlign:"center"
+},
+"#questSelectArrow":{
+	image:"/images/green_arrow_icon.png",
+	height:"34dp",
+	right:"10dp",
+	textAlign:"center",
+	top:"5dp"
+},
+".questTxtLineBg":{
+	textAlign:"left",
+	color:"#61615d",
+	font:{
+	   fontSize:"13",
+	   fontFamily:"RobotoCondensed-Regular"
+	},
+	bottom:"5dp",
+	left:"3dp"
+},
+".questTxtHeadBg":{
+	textAlign:"center",
+	color:"#8b8b3e",
+	font:{
+	   fontSize:"17",
+	   fontFamily:"RobotoCondensed-Regular"
+	},
+	top:"0dp",
+	left:"3dp"
+},
+"#questSmallCup":{
+	image:"/images/cup_green_icon.png",
+	height:"15dp",
+	left:"0dp"
+},
+"#smallCupBg":{
+	width:"100%",
+	height:"20dp",
+	left:"10dp",
+	textAlign:"center",
+	bottom:"10dp"
+},
+".smallCupTxt":{
+	color:"#778833",
+	font:{
+	   fontSize:"14",
+	   fontFamily:"RobotoCondensed-Regular"
+	}
+},
+"#uploadPic":{
+	image:"/images/upload-pic.png",
+	height:"34dp",
+	textAlign:"center",
+	top:"30%"
+},
+".questPicBgGreen":{
+    backgroundColor:"#2d782e",
+	width:"16%",
+	height:"80dp",
+	left:"0dp"
+},
+".questPicBgRed":{
+    backgroundColor:"#b03230",
+	width:"16%",
+	height:"80dp",
+	left:"0dp"
+},
+".questPicBgBlue":{
+    backgroundColor:"#2077a2",
+	width:"16%",
+	height:"80dp",
+	left:"0dp"
+},
+".bottomNav":{
+	bottom:"0dp",
+	height:"70dp",
+	width:"100%",
+	backgroundImage:"/images/bottom-bg.png"
+},
+"#questIcon":{
+	image:"/images/Quests_white_icon.png",
+	height:"23dp",
+	textAlign:"center",
+	top:"12dp"
+},
+"#rankingIcon":{
+	image:"/images/ranking_white_icon.png",
+	height:"23dp",
+	textAlign:"center",
+	top:"12dp"
+},
+"#galleryIcon":{
+	image:"/images/gallery_white_icon.png",
+	height:"24dp",
+	textAlign:"center",
+	top:"12dp"
+},
+".questIconBg":{
+	width:"33%",
+	height:"70dp",
+	left:"0dp"
+},
+".questIconTxt":{
+	textAlign:"center",
+	bottom:"10dp",
+	color:"#ffffff",
+	font:{
+	   fontSize:"14",
+	   fontFamily:"RobotoCondensed-Regular"
+	}
+},
+".rankingIconBg":{
+	width:"34%",
+	height:"70dp",
+	textAlign:"center"
+},
+".rankingIconTxt":{
+	textAlign:"center",
+	bottom:"10dp",
+	color:"#ffffff",
+	font:{
+	   fontSize:"14",
+	   fontFamily:"RobotoCondensed-Regular"
+	}
+},
+".galleryIconBg":{
+	width:"33%",
+	height:"70dp",
+	right:"0dp"
+},
+".galleryIconTxt":{
+	textAlign:"center",
+	bottom:"10dp",
+	color:"#ffffff",
+	font:{
+	   fontSize:"14",
+	   fontFamily:"RobotoCondensed-Regular"
+	}
+},
+".galleryNavSelect":{
+	width:"33%",
+	height:"70dp",
+	right:"0dp",
+	backgroundImage:"/images/bottom-nav-slct.png",
+},
+".questNavSelect":{
+	width:"33%",
+	height:"70dp",
+	left:"0dp",
+	backgroundImage:"/images/bottom-nav-slct.png",
+},
+".rankingNavSelect":{
+	width:"34%",
+	height:"70dp",
+	textAlign:"center",
+	backgroundImage:"/images/bottom-nav-slct.png"
+},
+"#questView":{
+	image:"/images/frog_icon_2.png",
+	top:"20dp",
+	bottom:"20dp",
+	height:"170dp"
+}
+
+
+
+
+
+
+
